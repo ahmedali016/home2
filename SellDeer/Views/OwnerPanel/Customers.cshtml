@@ -1,0 +1,117 @@
+﻿@{
+    Layout = "~/Views/AdminLayout/_LayoutOwner.cshtml";
+}
+<script>
+    function deleteform() {
+        var deleteforms = document.getElementById("custform");
+        deleteforms.action = "Customerss";
+        
+        deleteforms.submit();
+
+
+    }
+</script>
+<form  id="custform"action="Customerspost" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- general form elements disabled -->
+                <div class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title">General Elements</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input name="custNametxt" type="text" class="form-control" placeholder="Enter ..." />
+
+                        </div>
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input name="custUserNametxt" type="text" class="form-control" placeholder="Enter ..." />
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input name="custMailtxt" type="text" class="form-control" placeholder="Enter ..." />
+                            <label>Phone</label>
+                            <input name="custPhonetxt" type="text" class="form-control" placeholder="Enter ..." style="width:50%" />
+                            <label>Date of Birth:</label>
+                            <div class="input-group">
+                                <input name="birthDatetxt" type="date" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input name="custPasswordtxt" type="text" class="form-control" placeholder="Enter ..." />
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input name="custAddresstxt" type="text" class="form-control" placeholder="Enter ..." />
+                            <label>Address</label>
+                            <input name="id" type="number" value="1" class="form-control" placeholder="Enter ..." />
+
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+                        <!-- input states -->
+                        <div class="form-group has-error">
+                            <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with error</label>
+                            <input type="text" class="form-control" id="inputError" placeholder="Enter ..." />
+                        </div>
+                        <!-- checkbox -->
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" />
+                                    Checkbox 1
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" />
+                                    Checkbox 2
+                                </label>
+                            </div>
+
+                        </div>
+                        <!-- radio -->
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    male
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    female
+                                </label>
+                            </div>
+                        </div>
+                        <!-- select -->
+                        <div class="form-group">
+                            <label>Select</label>
+                            <select class="form-control">
+                                <option> 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Save" />
+                        <input type="button"  value="Delete" onclick="deleteform()" />
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+            </div>
+        </div>
+    </div>
+
+</form>          
+
+
+
+
+@{Html.RenderPartial("~/Views/OwnerPanel/PartialView/_CustomersEdit.cshtml", null);}

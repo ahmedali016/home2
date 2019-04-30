@@ -39,6 +39,19 @@ namespace SellDeer
                       "~/Content/prettyPhoto.css",
                       "~/Content/price-range.css",
                       "~/Content/responsive.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Admin/css").Include(
+                "~/Content/Admincss/_all-skins.min.css",
+                "~/Content/Admincss/AdminLTE.min.css",
+                "~/Content/Admincss/bootstrap.min.css",
+                "~/Content/Admincss/CustomAdminStyle.css"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/Admin").Include(
+                "~/Scripts/AdminScripts/app.min.js",
+                "~/Scripts/AdminScripts/bootstrap.min.js",
+                "~/Scripts/AdminScripts/fastclick.min.js",
+                "~/Scripts/AdminScripts/jQuery-2.1.3.min.js",
+                "~/Scripts/AdminScripts/jquery.slimscroll.min.js"));
         }
     }
 }

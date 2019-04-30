@@ -1,0 +1,76 @@
+﻿@model SellDeer.Models.ApplicationUser
+<style type="text/css">
+    .webGrid {
+        margin: 4px;
+        border-collapse: collapse;
+        width: 500px;
+        background-color: #B4CFC3;
+    }
+
+    .header {
+        background-color: #C1D4E6;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+    .webGrid th, .webGrid td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+    }
+
+    .alt {
+        background-color: #E4E9F5;
+        color: #000;
+    }
+
+    .gridHead a:hover {
+        text-decoration: underline;
+    }
+
+    .description {
+        width: auto;
+    }
+
+    .select {
+        background-color: #71857C;
+    }
+</style> 
+<h3>Perview customers</h3>
+@{WebGrid gh = new WebGrid(source: ViewBag.viewCustData);
+   // WebGridRow gridrow = new WebGridRow(gh, "id",1);
+    //var s = ViewBag.viewCustData as WebGrid;
+}
+
+@gh.GetHtml(tableStyle: "webGrid",headerStyle: "header",alternatingRowStyle: "alt",
+    selectedRowStyle: "select")
+<table cellpadding="1" cellspacing="1" border="1" >
+    <thead>
+        <tr>
+        <th><label>Name</label></th>
+            <th><label>Phone</label></th>
+            <th><label >Mail</label></th>
+        </tr>
+      
+        
+   @*@foreach (var item in ViewBag.viewCustData)
+   {
+       <tr><td>@item[0]</td>
+           <td>@item[1]</td>
+           <td>@item[2]</td>
+           <td>@item[3]</td>
+           <td>@item[4]</td>
+           <td>@item[5]</td>
+           <td>@item[6]</td>
+           <td>@item[7]</td>
+           <td>@item[8]</td>
+           </tr>
+   }*@
+
+    <tbody>
+        <tr>
+            <td>aaaaaaaa</td>
+            <td>dddddddddddd</td>
+            <td>aaaaaaaaaaaaa</td>
+        </tr>
+    </tbody>
+</table>

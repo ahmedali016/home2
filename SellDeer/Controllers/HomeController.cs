@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using SellDeer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -47,6 +49,20 @@ namespace SellDeer.Controllers
         }
 
         public ActionResult ProductDetail()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Cart()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult LoginPage()
         {
             ViewBag.Message = "Your contact page.";
 

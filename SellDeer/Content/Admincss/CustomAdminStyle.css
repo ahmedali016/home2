@@ -1,0 +1,9 @@
+﻿body {
+}
+.inputtxt {
+    width: 100%;
+    border: 1px solid gray;    
+    border-radius:50px;
+    padding:10px;
+    margin:10px;
+}
