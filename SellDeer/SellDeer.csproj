@@ -1004,6 +1004,11 @@
     <Content Include="Views\OwnerPanel\Category.cshtml" />
     <Content Include="Views\OwnerPanel\Brands.cshtml" />
     <Content Include="Views\OwnerPanel\SubCategory.cshtml" />
+    <Content Include="Views\OwnerPanel\Offers.cshtml" />
+    <Content Include="Views\OwnerPanel\Orders.cshtml" />
+    <Content Include="Views\OwnerPanel\ConfirmedOrders.cshtml" />
+    <Content Include="Views\OwnerPanel\DeliverdOrders.cshtml" />
+    <Content Include="Views\OwnerPanel\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

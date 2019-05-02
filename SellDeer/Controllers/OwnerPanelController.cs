@@ -43,6 +43,36 @@ namespace SellDeer.Controllers
             return View();
         }
 
+        public ActionResult Offers()
+        {
+
+            return View();
+        }
+
+        public ActionResult ConfirmedOrders()
+        {
+
+            return View();
+        }
+
+        public ActionResult Orders()
+        {
+
+            return View();
+        }
+
+        public ActionResult DeliverdOrders()
+        {
+
+            return View();
+        }
+
+        public ActionResult Products()
+        {
+
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Customers()
         {
