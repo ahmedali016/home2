@@ -25,6 +25,24 @@ namespace SellDeer.Controllers
 
             return View();
         }
+
+        public ActionResult Category()
+        {
+
+            return View();
+        }
+
+        public ActionResult Brands()
+        {
+
+            return View();
+        }
+        public ActionResult SubCategory()
+        {
+
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Customers()
         {

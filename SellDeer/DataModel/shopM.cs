@@ -34,6 +34,7 @@ namespace SellDeer.DataModel
         public virtual DbSet<SecondSub> SecondSub { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<ServicesCategory> ServicesCategory { get; set; }
+        public virtual DbSet<Stock> Stock { get; set; }
         public virtual DbSet<SubCategory> SubCategory { get; set; }
         public virtual DbSet<SubService> SubService { get; set; }
 

@@ -4,5 +4,52 @@
     Layout = "~/Views/AdminLayout/_LayoutOwner.cshtml";
 }
 
-<h2>CompanyInfo</h2>
+<h2>Company Info</h2>
 
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header">
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="txtcompanyName">Company name</label>
+                            <input type="text" class="form-control" id="txtcompanyName" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtphone">Phone</label> 
+                            <input type="text" class="form-control" id="txtphone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtphone2">Phone2</label> 
+                            <input type="text" class="form-control" id="txtphone2" placeholder="Phone2">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtAddress">Address</label>
+                            <input type="text" class="form-control" id="txtAddress" placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail">Email</label>
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtAbout">About</label>
+                            <textarea class="form-control" id="txtAbout"></textarea>
+                            
+                        </div>                        
+                    </div><!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div><!-- /.box -->
+            <!-- Form Element sizes -->
+            
+        </div>
+        </div>
+    </section>

@@ -81,6 +81,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -200,6 +202,32 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OwnerPanelController.cs" />
+    <Compile Include="DataModel\AspNetRoles.cs" />
+    <Compile Include="DataModel\AspNetUserClaims.cs" />
+    <Compile Include="DataModel\AspNetUserLogins.cs" />
+    <Compile Include="DataModel\AspNetUsers.cs" />
+    <Compile Include="DataModel\Brand.cs" />
+    <Compile Include="DataModel\Category.cs" />
+    <Compile Include="DataModel\Company.cs" />
+    <Compile Include="DataModel\CompanyDetails.cs" />
+    <Compile Include="DataModel\Customer.cs" />
+    <Compile Include="DataModel\CustomerDetails.cs" />
+    <Compile Include="DataModel\CustomerReviews.cs" />
+    <Compile Include="DataModel\C__MigrationHistory.cs" />
+    <Compile Include="DataModel\Employee.cs" />
+    <Compile Include="DataModel\OfferDetails.cs" />
+    <Compile Include="DataModel\Offers.cs" />
+    <Compile Include="DataModel\OrderDetails.cs" />
+    <Compile Include="DataModel\Orders.cs" />
+    <Compile Include="DataModel\Products.cs" />
+    <Compile Include="DataModel\RecallItems.cs" />
+    <Compile Include="DataModel\SecondSub.cs" />
+    <Compile Include="DataModel\Services.cs" />
+    <Compile Include="DataModel\ServicesCategory.cs" />
+    <Compile Include="DataModel\shopM.cs" />
+    <Compile Include="DataModel\Stock.cs" />
+    <Compile Include="DataModel\SubCategory.cs" />
+    <Compile Include="DataModel\SubService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -973,6 +1001,9 @@
     <Content Include="Views\OwnerPanel\Customers.cshtml" />
     <Content Include="Views\OwnerPanel\PartialView\_CustomersEdit.cshtml" />
     <Content Include="Views\OwnerPanel\CompanyInfo.cshtml" />
+    <Content Include="Views\OwnerPanel\Category.cshtml" />
+    <Content Include="Views\OwnerPanel\Brands.cshtml" />
+    <Content Include="Views\OwnerPanel\SubCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
