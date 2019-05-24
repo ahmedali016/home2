@@ -15,7 +15,6 @@ namespace SellDeer.DataModel
         [StringLength(50)]
         public string brand_name { get; set; }
 
-        [StringLength(50)]
-        public string brand_nameAr { get; set; }
+        public bool del_flag { get; set; }
     }
 }

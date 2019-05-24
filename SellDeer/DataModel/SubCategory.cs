@@ -14,14 +14,13 @@ namespace SellDeer.DataModel
         [Required]
         [StringLength(70)]
         public string sub_cat_name { get; set; }
-
-        [Required]
-        [StringLength(70)]
-        public string sub_cat_nameAr { get; set; }
-
+                
         public string discription { get; set; }
 
         public string img { get; set; }
+
+        [StringLength(20)]
+        public string lang { set; get; }
 
         public bool? del_flag { get; set; }
 
@@ -33,6 +32,7 @@ namespace SellDeer.DataModel
 
         public int modify_user_id { get; set; }
 
-        public int? cat_id { get; set; }
+        [Required]
+        public int cat_id { get; set; }
     }
 }

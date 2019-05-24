@@ -1,0 +1,27 @@
+﻿<form method="post" action="editSubcategory" enctype="multipart/form-data">
+    <div id="divEditCateg" style="display:none">
+        <div class="box-body">          
+
+         <div class="form-group">
+                            <label for="txtCategoryName">Category</label>
+                            <select id="ddlCategForEdit" name="ddlCategForEdit" >
+                                @foreach (var item in ViewBag.catg)
+                                {
+                                    <option value="@item.id">@item.cat_name</option>
+                                }
+                               
+                            </select>
+                        </div>
+            <div class="form-group">
+                <label for="txtCategoryName">Subcategory name</label>
+                <input type="text" class="form-control" id="editSubcategoryName" name="editSubcategoryName" placeholder="Enter Subcategory" required>
+                <input type="text" id="subId" name="subId" value="" hidden />
+            </div>
+        </div><!-- /.box-body -->
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Edit</button>
+            <button type="reset" class="btn btn-primary" onclick="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+    </form>
+

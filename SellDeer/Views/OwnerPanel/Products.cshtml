@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<SellDeer.DataModel.Category>
 @{
     ViewBag.Title = "Products";
     Layout = "~/Views/AdminLayout/_LayoutOwner.cshtml";
@@ -18,7 +18,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="txtCategoryName">Category name</label>
-                            <input type="text" class="form-control" id="txtCategoryName" placeholder="Enter Category" required>
+                            <input type="text" class="form-control" id="txtCategoryName" name="categoryName" placeholder="Enter Category" required>
                         </div>
                         <div class="form-group">
                             <label for="inpImage">Category image</label>

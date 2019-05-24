@@ -5,10 +5,10 @@ namespace SellDeer.DataModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class shopM : DbContext
+    public partial class ShopM : DbContext
     {
-        public shopM()
-            : base("name=shopM")
+        public ShopM()
+            : base("name=ShopM")
         {
         }
 

@@ -224,7 +224,7 @@
     <Compile Include="DataModel\SecondSub.cs" />
     <Compile Include="DataModel\Services.cs" />
     <Compile Include="DataModel\ServicesCategory.cs" />
-    <Compile Include="DataModel\shopM.cs" />
+    <Compile Include="DataModel\ShopM.cs" />
     <Compile Include="DataModel\Stock.cs" />
     <Compile Include="DataModel\SubCategory.cs" />
     <Compile Include="DataModel\SubService.cs" />
@@ -1009,6 +1009,9 @@
     <Content Include="Views\OwnerPanel\ConfirmedOrders.cshtml" />
     <Content Include="Views\OwnerPanel\DeliverdOrders.cshtml" />
     <Content Include="Views\OwnerPanel\Products.cshtml" />
+    <Content Include="Views\OwnerPanel\PartialView\_CategoryEdit.cshtml" />
+    <Content Include="Views\OwnerPanel\PartialView\_BrandEdit.cshtml" />
+    <Content Include="Views\OwnerPanel\PartialView\_SubcategoryEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,9 +15,7 @@ namespace SellDeer.DataModel
         [StringLength(50)]
         public string cat_name { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string cat_nameAr { get; set; }
+        public string lang { get; set; }
 
         public string discription { get; set; }
 
