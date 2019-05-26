@@ -22,11 +22,47 @@ namespace SellDeer.Controllers
             return View();
         }
 
+        #region company info
+        [HttpGet]
         public ActionResult CompanyInfo()
         {
-
-            return View();
+            ShopM shop = new ShopM();
+            Company exist = shop.Company.Where(c => c.lang == "EN").FirstOrDefault();
+            return View(exist);
         }
+
+        [HttpPost]
+        public ActionResult CompanyInfo(string txtcompanyName,string txtphone,string txtphone2,string txtAddress,string txtEmail,string txtAbout)
+        {
+            ShopM shop = new ShopM();
+            Company exist = shop.Company.Where(c => c.lang == "EN").FirstOrDefault();
+            if (exist!=null)
+            {
+                exist.address = txtAddress;
+                exist.brief_discription = txtAbout;
+                exist.company_name = txtcompanyName;
+                exist.mail = txtEmail;
+                exist.phone = txtphone;
+                exist.mobile = txtphone2;
+            }
+            else
+            {
+                Company newcomp = new Company();
+                newcomp.address = txtAddress;
+                newcomp.brief_discription = txtAbout;
+                newcomp.company_name = txtcompanyName;
+                newcomp.mail = txtEmail;
+                newcomp.phone = txtphone;
+                newcomp.mobile = txtphone2;
+                newcomp.lang = "EN";
+                shop.Company.Add(newcomp);
+               
+            }
+            shop.SaveChanges();
+            exist = shop.Company.Where(c => c.lang == "EN").FirstOrDefault();
+            return View(exist);
+        }
+        #endregion
 
         #region category methods
 
@@ -128,7 +164,7 @@ namespace SellDeer.Controllers
         }
         #endregion
 
-        #region subCategorymethods
+        #region subCategory methods
         public ActionResult SubCategory()
         {
             ShopM shop = new ShopM();
@@ -212,11 +248,16 @@ namespace SellDeer.Controllers
             return View();
         }
 
+        #region products methods
         public ActionResult Products()
         {
 
             return View();
         }
+
+
+
+        #endregion
 
         [HttpGet]
         public ActionResult Customers()

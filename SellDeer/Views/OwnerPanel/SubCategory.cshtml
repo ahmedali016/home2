@@ -49,11 +49,11 @@
                 <div class="box-header">
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" action="SubCategory" enctype="multipart/form-data">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="txtCategoryName">Category</label>
-                            <select id="ddlCategForAdd" name="ddlCategForAdd" onchange="chn()">
+                            <select id="ddlCategForAdd" name="ddlCategForAdd" >
                                 @foreach (var item in ViewBag.catg)
                                 {
                                     <option value="@item.id">@item.cat_name</option>

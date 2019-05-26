@@ -13,11 +13,7 @@ namespace SellDeer.DataModel
         [Required]
         [StringLength(200)]
         public string product_name { get; set; }
-
-        [Required]
-        [StringLength(200)]
-        public string product_nameAr { get; set; }
-
+                
         public string discription { get; set; }
 
         public string main_img { get; set; }
@@ -45,5 +41,8 @@ namespace SellDeer.DataModel
         public int? brand_id { get; set; }
 
         public string note { get; set; }
+
+        [StringLength(20)]
+        public string lang { set; get; }
     }
 }

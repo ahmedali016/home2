@@ -13,10 +13,7 @@ namespace SellDeer.DataModel
 
         [StringLength(200)]
         public string company_name { get; set; }
-
-        [StringLength(200)]
-        public string company_nameAr { get; set; }
-
+               
         public string brief_discription { get; set; }
 
         public string description { get; set; }
@@ -42,6 +39,9 @@ namespace SellDeer.DataModel
 
         [StringLength(60)]
         public string sec_mail { get; set; }
+
+        [StringLength(20)]
+        public string lang { set; get; }
 
         public int? modify_user_id { get; set; }
 
