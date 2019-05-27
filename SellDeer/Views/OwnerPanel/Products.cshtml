@@ -4,6 +4,42 @@
     Layout = "~/Views/AdminLayout/_LayoutOwner.cshtml";
 }
 
+<script>
+    $(document).ready(function () {
+        getSubCateg();
+
+        $("#ddlCategoryNameAdd").on("change", function () {
+            getSubCateg();
+        });
+
+        function getSubCateg() {
+            debugger;
+            var cat_val = document.getElementById("ddlCategoryNameAdd").selectedOptions[0].value;
+            $.ajax(
+            {
+                url: '@Url.Action("/getSubcategoryForProduct")',
+                type: 'GET',
+                data: { catgId: cat_val },
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    var htm = '<option  value="0">None</option>';
+                    data.forEach((item) => {
+                        //var line = "" + item.id + ",&quot;" + item.sub_cat_name + "&quot;," + item.cat_id;
+                        htm += "<option value=" + item.id + ">" + item.sub_cat_name + "</option>";
+                    })
+                    var ddl = document.getElementById("ddlSubcategoryNameAdd");
+                    ddl.innerHTML = htm;
+                    return ("done");
+                },
+                error: function (data) {
+                    return ("error");
+                }
+            });
+        }
+    });
+
+</script>
+
 <h2>Products</h2>
 <section class="content">
     <div class="row">
@@ -14,14 +50,36 @@
                 <div class="box-header">
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form method="post" enctype="multipart/form-data">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="txtCategoryName">Category name</label>
-                            <input type="text" class="form-control" id="txtCategoryName" name="categoryName" placeholder="Enter Category" required>
+                            <label for="ddlbrandAdd">Brand</label>
+                            @Html.DropDownList("ddlbrandAdd", (IEnumerable<SelectListItem>)ViewBag.brand)
                         </div>
                         <div class="form-group">
-                            <label for="inpImage">Category image</label>
+                            <label for="ddlCategoryNameAdd">Category name</label>
+                            @Html.DropDownList("ddlCategoryNameAdd",(IEnumerable<SelectListItem>)ViewBag.catg,new { id = "ddlCategoryNameAdd" })
+                        </div>
+                        <div class="form-group">
+                            <label for="ddlSubcategoryNameAdd">Subcategory name</label>
+                            <select id="ddlSubcategoryNameAdd" name="ddlSubcategoryNameAdd">
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtProductNameAdd">Product name</label>
+                            <input type="text" class="form-control" name="txtProductNameAdd" placeholder="Product name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtProductPriceAdd">Price</label>
+                            <input type="text" class="form-control" id="txtProductPriceAdd" name="txtProductPriceAdd" placeholder="Price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtProductDiscriptionAdd">Product discription</label>
+                            @Html.TextArea("txtProductDiscriptionAdd",new { @class= "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label for="inpImage">Product image</label>
                             <input type="file" id="inpImage">
                             <p class="help-block"></p>
                         </div>
@@ -33,7 +91,7 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Responsive Hover Table</h3>
+                                    <h3 class="box-title">Products</h3>
                                     <div class="box-tools">
                                         <div class="input-group">
                                             <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" />
@@ -46,38 +104,19 @@
                                 <div class="box-body table-responsive no-padding">
                                     <table class="table table-hover">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>User</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Reason</th>
+                                            <th>Product name</th>
+                                            <th>Brand</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
                                         </tr>
                                         <tr>
                                             <td>183</td>
                                             <td>John Doe</td>
                                             <td>11-7-2014</td>
+                                            <td>11-7-2014</td>
                                             <td><span class="label label-success">Approved</span></td>
-                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>219</td>
-                                            <td>Alexander Pierce</td>
-                                            <td>11-7-2014</td>
-                                            <td><span class="label label-warning">Pending</span></td>
-                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>657</td>
-                                            <td>Bob Doe</td>
-                                            <td>11-7-2014</td>
-                                            <td><span class="label label-primary">Approved</span></td>
-                                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>175</td>
-                                            <td>Mike Doe</td>
-                                            <td>11-7-2014</td>
-                                            <td><span class="label label-danger">Denied</span></td>
                                             <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                                         </tr>
                                     </table>
